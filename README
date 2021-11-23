@@ -1,0 +1,16 @@
+Viridis color maps for awk
+
+Provides functions with the form:
+
+	to_<color map>_<format>(_min, _max, x)
+
+where, <color map> is either viridis or cividis
+and <format> is either hex (e.g. "#767676") or ps (e.g. "0.239 0.302 0.541").
+
+Link somewhere convenient:
+
+	ln -s `pwd`/viridis.awk $HOME/lib/
+
+Then call from a second progfile:
+
+	awk -f $HOME/lib/viridis.awk -f examples/heatmap.awk examples/lena > heatmap.ps
